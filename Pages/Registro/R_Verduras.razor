@@ -2,6 +2,7 @@
 @*page "/Verdura/{VerduraId:int}"*@
 @inject VerdurasBLL verdurasBLL
 @inject VitaminasBLL vitaminasBLL
+@inject NotificationService notificationService
 
 <EditForm Model="verdura" >
     <DataAnnotationsValidator/>
@@ -34,12 +35,15 @@
         </div>
         @* Verdura DETALLE *@
             <fieldset class="border-success">
+                <div class="card-body">
                 <div class="row">
                 @* Vitamina Id *@
                 <div class="col-2">
                     <label>Vitaminas</label>
                     <div class="btn-group me-2" role="group" aria-label="Second group">
-                        <input type="number" class="form-control" placeholder="Seleccione" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                       <select class="form-select" aria-label=".form-select-lg example">
+                        <option selected>Seleccione</option>
+                       </select>
                 </div>
                 </div>
                 @* Descripcion *@
@@ -59,7 +63,7 @@
                     </button>
                 </div>
                 </div>
-               
+               </div>
             </fieldset>
 
 
@@ -74,6 +78,9 @@
                         <th>Unidad de medida</th>
                     </tr>
                 </thead>
+                <tbody>
+                  fff
+                </tbody>
                 <tbody>
                     
                 </tbody>
@@ -97,5 +104,9 @@
     [Parameter]
     public Verduras verdura { get; set; } = new Verduras();
     
+      void ShowNotification(NotificationMessage message)
+        {
+            notificationService.Notify(message);
 
+        }
 }

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.EntityFrameworkCore;
+using Radzen;
 //using AP2_Verduras.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,10 @@ builder.Services.AddDbContext<Contexto>( options =>
     );
 builder.Services.AddScoped<VerdurasBLL>();
 builder.Services.AddScoped<VitaminasBLL>();
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddScoped<NotificationService>();
 //builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();
