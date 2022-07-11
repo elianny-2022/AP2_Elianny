@@ -12,6 +12,7 @@ builder.Services.AddDbContext<Contexto>( options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("ConStr"))
     );
 builder.Services.AddScoped<VerdurasBLL>();
+builder.Services.AddScoped<VitaminasBLL>();
 //builder.Services.AddSingleton<WeatherForecastService>();
 
 var app = builder.Build();

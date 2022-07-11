@@ -1,11 +1,11 @@
-@page "/Verduras"
-@inject VerdurasBLL verdurasBLL
+@page "/Vitaminas"
+@inject VitaminasBLL vitaminasBLL
 
 <EditForm Model="this">
     <div class="card">
 
         <div class="card-header">
-            <h4>Consulta de Verduras</h4>
+            <h4>Consulta de Vitaminas</h4>
         </div>
     </div>
     <div class="card-body">           
@@ -16,15 +16,12 @@
 
         <thead class="thead">
             <tr class="table">
-                <th>VerduraId</th>
                 <th>VitaminaId</th>
-                <th>Nombre</th>
-                <th>Fecha de Creacion</th>
-                <th>Observaciones</th> 
+                <th>Descripcion</th>
+                <th>Unidad de medida</th>
             </tr>
         </thead>
     </table>
 </EditForm>
 @code{
-    
 }

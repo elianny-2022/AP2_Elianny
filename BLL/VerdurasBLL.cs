@@ -26,7 +26,7 @@ public class VerdurasBLL
         private bool Insertar(Verduras verdura)
         {
             _contexto.Verduras.Add(verdura);
-            //sumar el inventario nuevamente
+            
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
@@ -43,7 +43,7 @@ public class VerdurasBLL
          private bool Modificar(Verduras verdura)
         {
 
-            //buscar el detalle anterior
+            
             var anterior = _contexto.Verduras
            .Where(c => c.VerduraId == verdura.VerduraId)
            .Include(c => c.Detalle)
@@ -51,7 +51,7 @@ public class VerdurasBLL
            .SingleOrDefault();
 
 
-            //restar el inventario del detalle anterior
+            
             foreach (var item in anterior.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
@@ -59,10 +59,10 @@ public class VerdurasBLL
                 vitamina.UnidadDeMedida -= item.Cantidad;
             }
 
-            //borrar los items del detalle anterior
+            
             _contexto.Database.ExecuteSqlRaw($"DELETE FROM VerdurasDetalle WHERE VerduraId={verdura.VerduraId};");
 
-            //sumar el inventario nuevamente
+            
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
@@ -80,7 +80,7 @@ public class VerdurasBLL
        public bool Eliminar(Verduras verdura)
         {
               _contexto.Verduras.Add(verdura);
-            //sumar el inventario nuevamente
+          
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
