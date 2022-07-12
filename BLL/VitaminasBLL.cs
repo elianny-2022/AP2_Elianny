@@ -16,6 +16,22 @@ public class VitaminasBLL
                 .AsNoTracking()
                 .SingleOrDefault();
          }
+         public string GetDescripcion(int vitamina)
+         {
+            var vit = _contexto.Vitaminas
+            .Where(c => c.VitaminaId ==vitamina)
+            .AsNoTracking()
+            .SingleOrDefault();
+            return vit.Descripcion;
+         }
+        public string GetUnidadMedida(int vitamina)
+        {
+            var vit = _contexto.Vitaminas
+            .Where(c => c.VitaminaId == vitamina)
+            .AsNoTracking()
+            .SingleOrDefault();
+            return vit.UnidadMedida;
+        }
         public List<Vitaminas> GetList()
         {
             return _contexto.Vitaminas

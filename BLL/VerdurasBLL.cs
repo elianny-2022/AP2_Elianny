@@ -30,7 +30,7 @@ public class VerdurasBLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida += item.Cantidad;
+                vitamina.Existencia += item.Cantidad;
             }
          
             bool insertar = _contexto.SaveChanges() >0;
@@ -56,7 +56,7 @@ public class VerdurasBLL
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
 
-                vitamina.UnidadDeMedida -= item.Cantidad;
+                vitamina.Existencia -= item.Cantidad;
             }
 
             
@@ -66,7 +66,8 @@ public class VerdurasBLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida += item.Cantidad;
+                vitamina.Existencia += item.Cantidad;
+                
 
                 _contexto.Entry(item).State = EntityState.Added;
             }
@@ -84,16 +85,17 @@ public class VerdurasBLL
             foreach (var item in verdura.Detalle)
             {
                 var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
-                vitamina.UnidadDeMedida -= item.Cantidad;
-
+               // _contexto.Vitaminas.Remove(vitamina);
+                vitamina.Existencia -= item.Cantidad;
+             
             }
                 _contexto.Entry(verdura).State = EntityState.Deleted;
 
                 bool elimino = _contexto.SaveChanges() > 0;
                 _contexto.Entry(verdura).State = EntityState.Detached;
+               
                 return elimino;
-        }
-
+        } 
 
         public Verduras? Buscar(int verdura)
         {
@@ -107,12 +109,5 @@ public class VerdurasBLL
         {
             return _contexto.Verduras.AsNoTracking().ToList();
         }
-        /* public List<Verduras> BuscarFecha( DateTime fecha, DateTime fecha1)
-        {
-            var fechas = _contexto.Verduras
-            .Where(f => f.Fecha.Date == fecha.Date || f.Fecha.Date == fecha1.Date)
-            .AsNoTracking().ToList();
-            return fechas;
-
-        }*/
+       
     }

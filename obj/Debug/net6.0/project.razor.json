@@ -12,6 +12,39 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -1324331467,
+        "Kind": "Components.Component",
+        "Name": "AP2_Verduras.Pages.Index",
+        "AssemblyName": "AP2_Verduras",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "AP2_Verduras.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1028055697,
+        "Kind": "Components.Component",
+        "Name": "AP2_Verduras.Pages.Index",
+        "AssemblyName": "AP2_Verduras",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AP2_Verduras.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "AP2_Verduras.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 596598375,
         "Kind": "Components.Component",
         "Name": "AP2_Verduras.Pages.Consulta.C_Verduras",
@@ -45,7 +78,40 @@
         }
       },
       {
-        "HashCode": -2079900226,
+        "HashCode": -670907962,
+        "Kind": "Components.Component",
+        "Name": "AP2_Verduras.Pages.Consulta.C_Vitaminas",
+        "AssemblyName": "AP2_Verduras",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "C_Vitaminas"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "AP2_Verduras.Pages.Consulta.C_Vitaminas"
+        }
+      },
+      {
+        "HashCode": -804255358,
+        "Kind": "Components.Component",
+        "Name": "AP2_Verduras.Pages.Consulta.C_Vitaminas",
+        "AssemblyName": "AP2_Verduras",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AP2_Verduras.Pages.Consulta.C_Vitaminas"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "AP2_Verduras.Pages.Consulta.C_Vitaminas",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1671740131,
         "Kind": "Components.Component",
         "Name": "AP2_Verduras.Pages.Registro.R_Verduras",
         "AssemblyName": "AP2_Verduras",
@@ -63,6 +129,14 @@
             "Metadata": {
               "Common.PropertyName": "verdura"
             }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "VerduraId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "VerduraId"
+            }
           }
         ],
         "Metadata": {
@@ -71,7 +145,7 @@
         }
       },
       {
-        "HashCode": -1230202398,
+        "HashCode": 389512099,
         "Kind": "Components.Component",
         "Name": "AP2_Verduras.Pages.Registro.R_Verduras",
         "AssemblyName": "AP2_Verduras",
@@ -89,44 +163,19 @@
             "Metadata": {
               "Common.PropertyName": "verdura"
             }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "VerduraId",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "VerduraId"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "AP2_Verduras.Pages.Registro.R_Verduras",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1324331467,
-        "Kind": "Components.Component",
-        "Name": "AP2_Verduras.Pages.Index",
-        "AssemblyName": "AP2_Verduras",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "AP2_Verduras.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1028055697,
-        "Kind": "Components.Component",
-        "Name": "AP2_Verduras.Pages.Index",
-        "AssemblyName": "AP2_Verduras",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AP2_Verduras.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "AP2_Verduras.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
